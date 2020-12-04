@@ -47,15 +47,13 @@ namespace Advent2020.Days
                     {
                         if (s + i + j == 2020)
                         {
-                            result = $"{s} x {i} x {j} = {s * i * j}";
-                            goto Finished;
+                            return $"{s} x {i} x {j} = {s * i * j}";
 
                         }
                     }
                 }
             }
-        Finished:
-            return result;
+            throw new ApplicationException("No valid result found");
         }
 
         private static IEnumerable<T> ReadValues<T>(string path)
