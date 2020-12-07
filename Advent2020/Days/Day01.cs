@@ -35,7 +35,6 @@ namespace Advent2020.Days
 
         public string GetAssignment2()
         {
-            var result = string.Empty;
             int outerRangeStart = 1;
             foreach (var s in expenses)
             {
