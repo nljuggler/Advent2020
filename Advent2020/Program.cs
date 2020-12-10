@@ -13,8 +13,7 @@ namespace Advent2020
         static void Main()
         {
 
-//            List<Type> days = Assembly.GetExecutingAssembly().GetTypes().Where(t => Regex.IsMatch(t.Name, "^Day[0-9]+$")).OrderBy(t => t.Name).ToList();
-            List<Type> days = Assembly.GetExecutingAssembly().GetTypes().Where(t => Regex.IsMatch(t.Name, "^Day08+$")).OrderBy(t => t.Name).ToList();
+            List<Type> days = Assembly.GetExecutingAssembly().GetTypes().Where(t => Regex.IsMatch(t.Name, "^Day[0-9]+$")).OrderBy(t => t.Name).ToList();
             foreach (var dayType in days)
             {
                 IDay day = (IDay)Activator.CreateInstance(dayType);

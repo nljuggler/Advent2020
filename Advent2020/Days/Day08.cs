@@ -26,7 +26,7 @@ namespace Advent2020.Days
             {
                 if (commands.Contains(Lines[index].Substring(0, 3)))
                 {
-                    var clonedLines = Lines.Select(item => (string)item.Clone()).ToList();
+                    var clonedLines = new List<string>(Lines);
                     clonedLines[index] = (clonedLines[index].StartsWith("jmp") ? "nop" : "jmp") + clonedLines[index].Substring(3);
                     var result = RunProgram(clonedLines);
                     if (!result.looping)
